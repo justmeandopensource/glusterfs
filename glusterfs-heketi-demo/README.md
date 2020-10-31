@@ -119,3 +119,11 @@ export HEKETI_CLI_KEY=secretpassword
 
 #### Play with heketi-cli
 Use help commands to start playing with heketi to use GlusterFS. Or watch my YouTube video
+
+#### The workflow
+* Create a Gluster cluster
+* Add nodes to the Gluster cluster
+* Add devices to the nodes in the Gluster cluster
+* Create volumes in the Gluster cluster
+* Mount volumes on client
+* Test redundancy by powering of gluster nodes
