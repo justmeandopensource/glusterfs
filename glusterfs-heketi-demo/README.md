@@ -10,6 +10,7 @@ When you do **vagrant up** inside vagrant-infra directory of this repo, you will
 |Gluster Node 2|gluster-2.example.com|172.16.16.202|Ubuntu 20.04|1G|1|
 
 > Root password for all the VMs is **admin**
+
 > Run all commands as root user unles otherwise specified
 
 ## Gluster Nodes Setup (on gluster-1 and gluster-2)
