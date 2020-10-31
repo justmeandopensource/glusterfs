@@ -1,6 +1,8 @@
 ## Setup Gluster cluster and Heketi RESTful layer playground
 Follow this documentation to set up and play with GlusterFS through Heketi interface
 
+![alt text](https://github.com/justmeandopensource/glusterfs/blob/master/glusterfs-heketi-demo/resources/gluster-heketi.png?raw=true)
+
 #### Vagrant Environment
 When you do **vagrant up** inside vagrant-infra directory of this repo, you will end up with below environment.
 |Role|FQDN|IP|OS|RAM|CPU|
