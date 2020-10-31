@@ -106,7 +106,10 @@ EOF
   systemctl enable --now heketi
 }
 ```
-
+#### Quick verification that heketi is running
+```
+curl localhost:8080/hello; echo
+```
 #### Export environment variables for heketi-cli
 ```
 export HEKETI_CLI_USER=admin
