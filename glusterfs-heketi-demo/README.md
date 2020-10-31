@@ -110,6 +110,7 @@ EOF
 ```
 curl localhost:8080/hello; echo
 ```
+> From now on you can run heketi-cli commands as non-root user
 #### Export environment variables for heketi-cli
 ```
 export HEKETI_CLI_USER=admin
