@@ -1,0 +1,38 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+ENV['VAGRANT_NO_PARALLEL'] = 'yes'
+
+Vagrant.configure(2) do |config|
+
+  config.vm.provision "shell", path: "bootstrap.sh"
+
+  Nodes = 2
+
+  # Gluster Server Nodes
+  (1..Nodes).each do |i|
+    config.vm.define "gluster-#{i}" do |node|
+      node.vm.box = "ubuntu/focal64"
+      node.vm.hostname = "gluster-#{i}.example.com"
+      node.vm.network "private_network", ip: "172.16.16.20#{i}"
+      node.vm.provider "virtualbox" do |v|
+        v.name = "gluster-#{i}"
+        v.memory = 1024
+        v.cpus = 1
+      end
+    end
+  end
+
+  # Heketi Node
+  config.vm.define "heketi" do |node|
+    node.vm.box = "ubuntu/focal64"
+    node.vm.hostname = "heketi.example.com"
+    node.vm.network "private_network", ip: "172.16.16.200"
+    node.vm.provider "virtualbox" do |v|
+      v.name = "heketi"
+      v.memory = 1024
+      v.cpus = 1
+    end
+  end
+
+end
